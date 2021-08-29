@@ -1,5 +1,7 @@
 <template>
-  <div class="w-screen h-screen flex justify-center items-center">
+  <div
+    class="w-screen h-screen flex justify-center items-center overscroll-y-contain"
+  >
     <main
       class="relative w-full h-screen-w font-extrabold text-default sm:h-full sm:w-full 2xl:m-auto 2xl:w-screen-1/3 2xl:h-screen-w-1/3 "
     >
