@@ -1,9 +1,9 @@
 <template>
-  <div
-    class="w-screen h-screen flex justify-center items-center overscroll-none"
-  >
+  <div class="w-screen h-screen flex justify-center items-center">
     <main
       class="relative w-full h-screen-w font-extrabold text-default sm:h-full sm:w-full 2xl:m-auto 2xl:w-screen-1/3 2xl:h-screen-w-1/3 "
+      @touchstart.prevent="handleTouchStart"
+      @touchend.prevent="handleTouchEnd"
     >
       <div class="z-0 grid grid-rows-4 gap-y-3 bg-board p-4 w-full h-full">
         <div
@@ -98,8 +98,6 @@ export default {
   },
   mounted() {
     window.addEventListener("keydown", this.handleKeyDown);
-    window.addEventListener("touchstart", this.handleTouchStart);
-    window.addEventListener("touchend", this.handleTouchEnd);
   },
 };
 </script>
