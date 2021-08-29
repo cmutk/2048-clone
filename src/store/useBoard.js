@@ -154,22 +154,23 @@ const actions = {
   left: (currentBoard) => {
     const newBoard = moveLeft(currentBoard);
     actions.updateBoard(newBoard);
-    actions.checkEndGame(currentBoard);
+    actions.checkEndGame(newBoard);
   },
   right: (currentBoard) => {
     const newBoard = moveRight(currentBoard);
     actions.updateBoard(newBoard);
-    actions.checkEndGame(currentBoard);
+    actions.checkEndGame(newBoard);
   },
   up: (currentBoard) => {
     const newBoard = moveUp(currentBoard);
     actions.updateBoard(newBoard);
-    actions.checkEndGame(currentBoard);
+    actions.checkEndGame(newBoard);
   },
   down: (currentBoard) => {
     const newBoard = moveDown(currentBoard);
+    if (newBoard === currentBoard) return;
     actions.updateBoard(newBoard);
-    actions.checkEndGame(currentBoard);
+    actions.checkEndGame(newBoard);
   },
   checkEndGame: (currentBoard) => {
     if (checkWin(currentBoard)) {
