@@ -6,8 +6,9 @@
       <div class="flex flex-col items-center flex-grow w-full">
         <h2 class="flex text-2xl m-4">{{ content.message }}</h2>
         <button
-          class="bg-txt-primary text-txt-secondary p-4 text-md font-bold"
+          class="z-20 bg-txt-primary text-txt-secondary p-4 text-md font-bold"
           @click="reloadPage"
+          @touchend="reloadPage"
         >
           {{ content.buttonText }}
         </button>
